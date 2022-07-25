@@ -27,6 +27,7 @@ const failure = options => {
 /**
  * 被Mock的各个请求
  */
+MockJS.mock('/restful/1/', 'get', o => { return {'id': 8, 'title': 'reco'} })
 MockJS.mock('/restful/products', 'get', o => loadJSON(o, 'products.json'))
 MockJS.mock('/restful/advertisements', 'get', o => loadJSON(o, 'advertisements.json'))
 MockJS.mock('/restful/products', 'post', o => failure(o))

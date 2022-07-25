@@ -2,13 +2,13 @@
   <div>
     <img src="../../assets/logo-color.png" class="logo">
     <span class="title">Fenix's Bookstore</span>
-    <el-form :model="authorization" :rules="rules" ref="login-form" class="login-form">
+    <el-form :model="authorization" :rules="rules" ref="login-form" class="login-form" label-position="left">
       <el-form-item prop="name">
         <el-input placeholder="请输入用户" v-model="authorization.name">
           <template slot="prepend"><i class="el-icon-user"></i></template>
         </el-input>
       </el-form-item>
-      <el-form-item prop="password">
+      <el-form-item prop="password" show-message="false">
         <el-input placeholder="请输入密码" show-password v-model="authorization.password">
           <template slot="prepend"><i class="el-icon-unlock"></i></template>
         </el-input>
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'LoginForm',
   data () {
